@@ -14,10 +14,8 @@
             border-left: 1px solid #e4e4e4;
             border-right: 1px solid #e4e4e4;
             border-bottom: 1px solid #e4e4e4;
-            /*//site//ab iske baad to sahi kar hi loge yaar containers sahi hogae h buss ab border dena h left right divs medede yaar*/
         }
 
-        /*//ye kya h lal batti sahi kar*/
         @font-face {
             font-family: 'Averta';
             src: local('Averta'), url(static/font/Averta.woff) format('woff')
@@ -28,9 +26,6 @@
             color: #111517;
             background-image: url("static/img/Background%20Doodle.png");
             background-size: 800px 600px;
-            /*opacity : 0.8;*/
-            /*z-index: -1;*/
-            /*background-repeat: no-repeat;*/
         }
 
         div {
@@ -38,7 +33,7 @@
         }
 
         .founder {
-            padding: 0px;
+            padding: 0;
         }
 
         h2 {
@@ -64,14 +59,22 @@
         }
 
         .row {
-            margin-right: 0px;
+            margin-right: 0;
+        }
+
+        .logo-wrapper {
+            padding-right: 0;
+        }
+
+        footer {
+            padding-top: 5%;
         }
     </style>
 
 </head>
 <body>
 <div class="wrapper">
-    <div class="col-md-12 col-lg-12">
+    <div class="col-md-12 col-lg-12 logo-wrapper">
         <div class="row logo">
             <div>
                 <img src="static/img/Header.png" height="70px">
@@ -81,36 +84,32 @@
     <div class="row">
         <div class="col-md-12">
             <p>
-                Campus Vault helps you to showcase yourself and create valuable
-                opportunities in your life.</p>
+                CampusVault helps you to showcase yourself and <br>
+                create valuable opportunities in your life.
+            </p>
 
-            <h2>Not on CAMPUSVAULT?</h2>
+            <h2>NOT ON CAMPUSVAULT?</h2>
 
-            <div>DONT WORRY.</div>
+            <div>DON'T WORRY.</div>
             <div>We're almost there.</div>
 
-            <h2>#COMING SOON</h2>
+            <h2>#COMINGSOON</h2>
             <hr>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <button type="button" class="btn btn-primary">About Us</button>
+            <button type="button" class="btn btn-primary">ABOUT US</button>
 
             <p class="about">
                 CampusVault is a ProSo (professional + social) network
-                exceptionally<br>
-                known for students. Here students can create their own personal
-                brand,<br>
-                reating worthwile oppertunities in terms of internships,
-                placemants,
-                etc.<br>
-                Apaert from this, studentscan freely network within their closed
-                student<br>
+                exceptionally for students. Here students <br>
+                can create their own personal brand, creating worthwhile
+                opportunities in terms of internships, <br>
+                placements, etc. A part from this, students can freely network
+                within their closed student <br>
                 community and share their thoughts, without any interference
-                from<br>
-                people
-                outside the community.</p>
+                from people outside the community.<br>
 
             <h3>FOUNDERS</h3>
         </div>
@@ -123,8 +122,8 @@
                     <img src="static/img/DP_Ihit.png" width="150"
                          height="150"><br>
                     <span>Ihit Rao</span><br>
-                    <span>9919208399</span><br>
-                    <span>init@thecampusvault.com</span>
+                    <span>9910208399</span><br>
+                    <span>ihit@thecampusvault.com</span>
                 </div>
                 <div class="col-md-6 founder">
                     <img src="static/img/DP_Arnav.png" width="150" height="150"><br>
@@ -133,13 +132,16 @@
                     <span>arnav@thecampusvault.com</span>
                 </div>
             </div>
-            <!--//wrap mat chhuna kya karu? dekh blue ssbhia css hatado  kar le bhia&ndash;&gt;-->
-            <!--//site dikhao?-->
 
             <div class="col-md-2"></div>
         </div>
     </div>
-    <!--kar bhai-->
+    <div class="row">
+        <footer class="footer">
+            <hr>
+            <p>Campus Vault © 2015. All Rights Reserved.</p>
+        </footer>
+    </div>
 
 </div>
 </body>
