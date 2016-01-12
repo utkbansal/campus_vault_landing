@@ -16,6 +16,10 @@
             border-bottom: 1px solid #e4e4e4;
         }
 
+        #ihit{
+            border-right: 1px solid #e4e4e4;
+        }
+
         @font-face {
             font-family: 'Averta';
             src: local('Averta'), url(static/font/Averta.woff) format('woff')
@@ -70,6 +74,11 @@
         footer {
             padding-top: 5%;
         }
+        #about-heading{
+            background-color:#03527b;
+            padding: 1% 2%;
+            color: #acbfca;
+        }
     </style>
 
 </head>
@@ -100,7 +109,8 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <button type="button" class="btn btn-primary">ABOUT US</button>
+            <!--<button type="button" class="btn btn-primary">ABOUT US</button>-->
+            <h3><span id="about-heading">ABOUT US</span></h3>
 
             <p class="about">
                 CampusVault is a ProSo (professional + social) network
@@ -119,7 +129,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="row wrapForBorder">
-                <div class="col-md-6 founder">
+                <div class="col-md-6 founder" id="ihit">
                     <img src="static/img/DP_Ihit.png" width="150"
                          height="150"><br>
                     <span>Ihit Rao</span><br>
