@@ -1,33 +1,39 @@
+{% from 'macro.html' import render_form %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Campus Vault</title>
-    <link rel="shortcut icon" href="static/img/Icon%20logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static/img/Icon%20logo.png"
+          type="image/x-icon">
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style>
-        .wrapForBorder {
+        .wrap-for-border {
             padding: 5%;
             border-left: 1px solid #e4e4e4;
             border-right: 1px solid #e4e4e4;
             border-bottom: 1px solid #e4e4e4;
         }
 
-        #ihit{
+        #ihit {
             border-right: 1px solid #e4e4e4;
         }
 
         @font-face {
-            font-family: 'Averta';
-            src: local('Averta'), url(static/font/Averta.woff) format('woff')
+            font-family: 'AvertaSemiBold';
+            src: url('static/font/Averta%20Semibold.woff') format('woff')
+        }
+
+        @font-face {
+            font-family: 'AvertaBlack';
+            src: url('static/font/Averta%20Black.woff') format('woff')
         }
 
         body {
-            font-family: 'Averta';
-            font-size: 15px;
+        {#            font-family: 'AvertaSemiBold', sans-serif;#} font-size: 15px;
             color: #111517;
             background-image: url("static/img/Background%20Doodle.png");
             background-size: 800px 600px;
@@ -54,11 +60,6 @@
             margin-bottom: 3%;
         }
 
-        .btn {
-            border-radius: 0;
-            width: 15%;
-        }
-
         .about {
             padding: 2%;
         }
@@ -74,8 +75,9 @@
         footer {
             padding-top: 5%;
         }
-        #about-heading{
-            background-color:#03527b;
+
+        #about-heading {
+            background-color: #03527b;
             padding: 1% 2%;
             color: #acbfca;
         }
@@ -128,7 +130,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <div class="row wrapForBorder">
+            <div class="row wrap-for-border">
                 <div class="col-md-6 founder" id="ihit">
                     <img src="static/img/DP_Ihit.png" width="150"
                          height="150"><br>
@@ -148,12 +150,28 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h2>Subscribe</h2>
+            {% include 'form.html' %}
+        </div>
+    </div>
+
+    <div class="row">
         <footer class="footer">
             <hr>
             <p>Campus Vault © 2015. All Rights Reserved.</p>
         </footer>
     </div>
+    {% include 'modal.html' %}
 
 </div>
+<script>
+
+    setTimeout(function () {
+        $('#myModal').modal('show');
+    }, 2000);
+
+</script>
 </body>
 </html>
