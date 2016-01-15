@@ -9,5 +9,5 @@ def home():
     if form.validate_on_submit():
         # form.save()
         flash('You have successfully subscribed')
-        return redirect(url_for('home'))
-    return render_template('index.html', form=form)
+        return render_template('index.html', form=form, subscribe=False)
+    return render_template('index.html', form=form, subscribe=True)

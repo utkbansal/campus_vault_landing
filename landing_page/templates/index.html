@@ -15,11 +15,31 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="col-md-12 col-lg-12 logo-wrapper">
-        <div class="row logo">
-            <div>
-                <img src="static/img/Header.png" height="70px">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 logo-wrapper">
+            <div class="row logo">
+                <div>
+                    <img src="static/img/Header.png" height="70px">
+                </div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div>
+                        <ul>
+                            {% for message in messages %}
+                                <div class="alert alert-success" role="alert">
+                                    <li>{{ message }}</li>
+                                </div>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endwith %}
         </div>
     </div>
     <div class="row">
@@ -78,13 +98,15 @@
             <div class="col-md-2"></div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <h2>Subscribe</h2>
-            {% include 'form.html' %}
+    {% if subscribe %}
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h2>Subscribe</h2>
+                {% include 'form.html' %}
+            </div>
         </div>
-    </div>
+    {% endif %}
 
     <div class="row">
         <footer class="footer">
@@ -92,7 +114,11 @@
             <p>CampusVault © 2015. All Rights Reserved.</p>
         </footer>
     </div>
-    {% include 'modal.html' %}
+
+    {#    {{ subscribe }}#}
+    {% if subscribe %}
+        {% include 'modal.html' %}
+    {% endif %}
 
 </div>
 <script>
