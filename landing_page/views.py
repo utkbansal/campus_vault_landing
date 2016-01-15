@@ -6,10 +6,8 @@ from .forms import SubscribeForm
 @app.route('/', methods=['GET', 'POST'])
 def home():
     form = SubscribeForm()
-    if request.method == 'GET':
-        return render_template('index.html', form=form)
-    else:
-        if form.validate_on_submit():
-            form.save()
-            flash('You have successfully subscribed')
-            return redirect(url_for('home'))
+    if form.validate_on_submit():
+        # form.save()
+        flash('You have successfully subscribed')
+        return redirect(url_for('home'))
+    return render_template('index.html', form=form)
