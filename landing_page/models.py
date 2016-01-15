@@ -2,9 +2,10 @@ from landing_page import db
 
 
 class UserDetail(db.Model):
-    first_name = db.Column(db.String)
-    last_name = db.Column(db.String)
-    email = db.Column(db.String, primary_key=True)
+    id = db.Column(db.Integer, autoincrement=True)
+    first_name = db.Column(db.String, nullable=False)
+    last_name = db.Column(db.String, nullable=False)
+    email = db.Column(db.String, primary_key=True, nullable=False)
     phone_no = db.Column(db.String)
 
     def __init__(self, first_name, last_name, email, phone_no):
