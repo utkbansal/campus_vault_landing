@@ -13,8 +13,8 @@ class SubscribeForm(Form):
     phone_number = TextField(validators=[])
 
     def save(self):
-        obj = UserDetail(self.first_name, self.last_name, self.email,
-                         self.phone_number)
+        obj = UserDetail(self.first_name.data, self.last_name.data, self.email.data,
+                         self.phone_number.data)
         db.session.add(obj)
-        db.session.save()
+        db.session.commit()
         return obj
